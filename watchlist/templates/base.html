@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     {% block head %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="{{ url_for('static',filename='tinymce/tinymce.min.js') }}"></script>
     <script src="{{ url_for('static',filename='tinymce/zh_CN.js') }}"></script>
     <script src="{{ url_for('static',filename='tinymce/plugins/imageupload/plugin.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='tinymce_setup.js') }}"></script>
 
     <title>{{ user.name }}的博客</title>
 
