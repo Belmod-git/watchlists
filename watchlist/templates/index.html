@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p style="max-width: 1000px;margin: auto">&emsp;&emsp;{{ movies|length }} Titles</p >
+<p style="max-width: 1000px;margin: auto">&emsp;&emsp;{{ movies|length }} Titles
+
+&emsp;&emsp;&emsp;&emsp;<a class='btn' href="{{ url_for('add') }}">添加</a>
+
+</p >
 
 
 
@@ -19,9 +23,7 @@
                 title="在IMDB中查找此电影">百度视频</a>
         </span>
         {% if current_user.is_authenticated %}
-        <span class='float-right'>
-            <a class='btn' href="{{ url_for('add') }}">添加</a>
-        </span>
+
         <span class='float-right'>
             <a class='btn' href="{{ url_for('edit',movie_id=movie.id) }}">编辑</a>
         </span>
