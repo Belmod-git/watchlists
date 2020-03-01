@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="background-color:#808080;">
+    <h3>博文添加页面</h3>
+    <form action='' method='post' style="max-width:1000px;margin: auto">
+        博文名称  <input type="text" name="title" autocomplete="off" required><br>
+        博文内容
+        <input type="text" id="tinydemo" value="" name="content" autocomplete="off" required >
+        <textarea id="iconsdemo2">
+
+        </textarea>
+
+            <script>
+              tinymce.init({selector: '#iconsdemo2',language:'zh_CN',plugins: 'code', });
+              //给input赋值
+                var box = document.getElementById('iconsdemo2').value;
+
+                document.getElementById("tinydemo")
+
+            </script>
+
+        <br>作者      <input type="text" name="author" autocomplete="off" required>
+        <input type="submit" class='btn' name='submit' value='添加'>
+    </form>
+</div>
+{% endblock %}
+

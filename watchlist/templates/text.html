@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" >
+<title>TinyMCE中文文档中文手册</title>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<!--    <link rel="stylesheet" href="http://tinymce.ax-z.cn/static/reset.css" type="text/css">-->
+<!--    <link rel="stylesheet" href="http://tinymce.ax-z.cn/static/ax.css" type="text/css">-->
+<!--    <link rel="stylesheet" href="http://tinymce.ax-z.cn/static/css.css" type="text/css">-->
+<!--    <script src="{{ url_for('static',filename='advlisttinymce/plugins/bdmap/plugin.min.js') }}"></script>-->
+<!--    <script src="{{ url_for('static',filename='advlisttinymce/plugins/bdmap/plugin.min.js') }}"></script>-->
+    <script src="{{ url_for('static',filename='tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='tinymce/zh_CN.js') }}"></script>
+    <script src="{{ url_for('static',filename='tinymce/plugins/imageupload/plugin.min.js') }}"></script>
+<!--    <script src="{{ url_for('static',filename='tinymce/plugins/codesample/css/prism.css') }}"></script>-->
+<!--    <script src="http://tinymce.ax-z.cn/static/js/prism.js"></script>-->
+<!--    <script src="http://tinymce.ax-z.cn/static/js/ax.js"></script>-->
+</head>
+
+
+<body>
+
+
+            <textarea id="iconsdemo2">替换图标演示ax-color，该效果的实现详见 <a href="/configure/editor-appearance.php#icons">配置参考→UI界面配置</a> 。</textarea>
+            <a href="hj.php">hj</a>
+            <script>
+              tinymce.init({selector: '#iconsdemo2',language:'zh_CN',plugins: 'code', })
+            </script>
+
+
+
+
+</body>
+</html>

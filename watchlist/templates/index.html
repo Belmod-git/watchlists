@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p style="max-width: 1000px;margin: auto">&emsp;&emsp;{{ movies|length }} Titles</p >
+
+
+
+<!-- 表单 -->
+
+
+
+
+<ul class='movie-list' style="max-width: 1000px;margin: auto;margin-top: 20px">
+    {% for movie in movies %}
+    <li>
+        {{ movie.title }} <br> {{ movie.content }} <br> {{ movie.author }} <br> {{ movie.pubdate }}
+        <span class='float-right'>
+            <a class='vbd' href="http://v.baidu.com/v?word={{ movie.title }}&ct=301989888&rn=67&pn=0&db=0&s=0&fbl=800&ie=utf-8&oq=nnkd&f=3&rsp=0" target='_blank'
+                title="在IMDB中查找此电影">百度视频</a>
+        </span>
+        {% if current_user.is_authenticated %}
+        <span class='float-right'>
+            <a class='btn' href="{{ url_for('add') }}">添加</a>
+        </span>
+        <span class='float-right'>
+            <a class='btn' href="{{ url_for('edit',movie_id=movie.id) }}">编辑</a>
+        </span>
+        <span class="float-right">
+            <form class="inline-form" action="{{ url_for('delete',movie_id=movie.id) }}" method="post">
+                <input class="btn" type="submit" name='delete' value="删除" onclick="return confirm('确定删除吗？')">
+            </form>
+        </span>
+        {% endif %}
+
+
+    {% endfor %}
+
+    </li>
+</ul>
+
+
+
+
+
+<img class='hulu' src="{{ url_for('static',filename='images/2.jpg') }}" alt="" style="margin-top: 20px">
+
+{% endblock %}
